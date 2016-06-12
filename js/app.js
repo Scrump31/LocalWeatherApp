@@ -1,1 +1,3 @@
-angular.module('weatherApp', []);
+(function(){ 
+	angular.module('weatherApp', []);
+})(); 

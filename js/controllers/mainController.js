@@ -1,6 +1,14 @@
 angular
 	.module('weatherApp')
 	.controller('mainCtrl', function($scope){
-	$scope.test = "Angular working!";
+		$scope.theWeather = [
+		{
+			city: "Fort Mill",
+			wind: "Clear",
+			degreeFar: 95,
+			degreeCel: 35
+		}
+		
+	];
 	   
 });
