@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Local Weather App</title>
+		
+	<!-- Weather Icons -->
+	<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">	
+		
+	<!-- Latest compiled and minified Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	
+	<!-- AngularJS -->
+	 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js">
+	 
+	 <style>
+	 	#mainSection {
+		 	margin-top: 10.5%; 
+	 	}
+	 	.wi.wi-day-cloudy.wi-fw {
+		 	font-size: 150%;
+	 	}
+	 </style>
+	</head>
+	<body class="container">
+			<!-- 
+				- Want to show local weather for the user's current location
+				- Show an active background image based on current weather
+				- toggle between degrees celcius and farenheight.
+				- use Open Weather API code I already have to get started
+				
+				
+			================================================== -->
+			
+			<div id="mainSection" class="text-center">
+				<div class="jumbotron">
+				  <h1>The Local Weather App</h1>
+				  <h2>City Goes Here</h2>
+				  <h2>95<span>&#8457</span></h2></p> <!-- Degrees Celsius code: &#8451 -->
+				  <h2>Wind Speed Here</h2>
+				  <h1><i class="wi wi-day-cloudy wi-fw "></i></h1>
+				  <p><a class="btn btn-primary btn-lg" href="#" role="button">Change Degrees</a></p>
+				</div>
+			</div><!-- mainSection -->	
+				
+		<script src="js/script.js" charset="utf-8"></script>	
+		
+		
+		</body>
+</html>
