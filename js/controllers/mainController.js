@@ -6,7 +6,8 @@ angular
 			city: "Fort Mill",
 			wind: "Clear",
 			degreeFar: 95,
-			degreeCel: 35
+			degreeCel: 35,
+			degOrFar: true
 		}
 		
 	];

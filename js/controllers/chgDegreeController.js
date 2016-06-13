@@ -6,6 +6,7 @@ angular
 			//$('#testDiv').textContent = "change degree test";
 			$scope.farDeg = document.getElementById('dInFar').textContent;
 			$scope.celDeg = document.getElementById('dInCel').textContent;
+			$scope.theWeather[0].degOrFar = !$scope.theWeather[0].degOrFar; 
 			
 			
 			//<h2 id="currentDegree">95<span>&#8457</span></h2></p>
@@ -14,6 +15,4 @@ angular
 			//Need a function to convert degrees 
 		};
 
-		
 	});
-		
