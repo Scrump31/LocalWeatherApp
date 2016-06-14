@@ -9,8 +9,8 @@ angular
 			$scope.theWeather[0].degOrFar = !$scope.theWeather[0].degOrFar; 
 			
 			
-			//<h2 id="currentDegree">95<span>&#8457</span></h2></p>
 			
+			//functional goal for this controller:
 			//when button clicked, if span is "F" then convert to "C" and vise versa
 			//Need a function to convert degrees 
 		};
