@@ -38,7 +38,7 @@
 			<div id="mainSection" class="text-center" ng-controller="AjaxCtrl">
 				<div class="jumbotron">
 				  <h1>The Local Weather App</h1>
-				  <h2>{{ locCast.name }}</h2>
+				  <h2>{{ locCast.name }}, {{ locCast.sys.country }}</h2>
 				  <h2 id="dInFar">{{ locCast.main.temp }}<span>&#8457</span></h2></p> 
 				  <h2 id="dInCel">{{ cvrtToCel }}<span>&#8451</span></h2></p>
 				  <h2>{{ locCast.weather[0].description }}</h2>
@@ -50,6 +50,7 @@
 					<button type="button" class="btn btn-primary" id="f"><i class="wi wi-degrees"></i>Fahrenheit</button>
 					<button type="button" class="btn btn-primary" id="c"><i class="wi wi-degrees"></i>Celsius</button>
 				  </div>
+				  <div>{{ noData }}</div>
 				</div><!-- jumbotron -->
 			</div>  <!-- mainSection -->	
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
