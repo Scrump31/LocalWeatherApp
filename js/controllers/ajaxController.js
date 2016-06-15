@@ -1,6 +1,6 @@
 angular
 	.module('weatherApp')
-	.controller('ajaxCtrl', function($scope, $http) {
+	.controller('AjaxCtrl', function($scope, $http) {
 		
 		// if browser supports geolocation
 		if (navigator.geolocation) {
@@ -8,20 +8,11 @@ angular
 					
 					$scope.lat = position.coords.latitude;
 					$scope.lon = position.coords.longitude;
-					/*
-					var latitude  = position.coords.latitude;
-					var longitude = position.coords.longitude;
-					
-				
-					$scope.$apply(function() {
-						$scope.lat = lattitude;
-						$scope.lon = longitude;
-					*/	
-					
 					
 					// Test API using local json copy	
 					$http.get("location.json").then(function (response) {
 						$scope.locCast = response.data;
+						$scope.cvrtToCel = Math.round( ($scope.locCast.main.temp -32) * 5 / 9); //converts temp data to Celsius
 			  		});	//get request
 					
 					/*
