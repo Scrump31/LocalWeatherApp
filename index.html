@@ -31,6 +31,11 @@
 	 	#dInCel {
 		 	display: none;
 	 	}
+	 	@media only screen and (max-width: 1000px) {
+		 	h2 {
+			 	font-size: 60px;
+		 	}
+	 	}
 	 </style>
 	</head>
 	<body class="container bg-primary" ng-app="weatherApp">
@@ -44,7 +49,7 @@
 				  <h1><i class="wi {{ dayOrNite }}{{ condition }}"></i></h1>
 				  <div>{{ noData }}</div>
 				  				  				  
-				  <div class="btn-group" role="group">
+				  <div class="btn-group btn-group-lg" role="group">
 					<button type="button" class="btn btn-primary" id="f"><i class="wi wi-degrees"></i>Fahrenheit</button>
 					<button type="button" class="btn btn-primary" id="c"><i class="wi wi-degrees"></i>Celsius</button>
 				  </div>
