@@ -2,13 +2,10 @@
 <html>
 	<head>
 		<title>Local Weather App</title>
-		
 	<!-- Weather Icons -->
 	<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">	
-		
 	<!-- Latest compiled and minified Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	
 	<!-- AngularJS -->
 	  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 	 
@@ -28,7 +25,6 @@
 	 </style>
 	</head>
 	<body class="container" ng-app="weatherApp">
-			
 			<div id="mainSection" class="text-center" ng-controller="AjaxCtrl">
 				<div class="jumbotron">
 				  <h1>The Local Weather App</h1>
@@ -36,23 +32,15 @@
 				  <h2 id="dInFar">{{ locCast.main.temp }}<span>&#8457</span></h2></p> 
 				  <h2 id="dInCel">{{ cvrtToCel }}<span>&#8451</span></h2></p>
 				  <h2>{{ locCast.weather[0].description }}</h2>
-				  <!--<h1><i class="wi wi-day-cloudy wi-fw"></i></h1>-->
-				  <h1><i class="wi {{ theWeather[0].iconTest }}"></i></h1>				  
-				  <div ng-controller="ChgDegreeCtrl">
+				  <h1><i class="wi {{ dayOrNite }}{{ condition }}"></i></h1>				  
+				  
 				  	<button class="btn btn-primary btn-lg" type="button">Change Degrees</button>
 				  	<!--<div id="testDiv" ng-show="true">{{ farDeg }} {{ celDeg }}</div>-->
-				  </div><!-- chgDegreeCtrl -->
-				  
 				</div><!-- jumbotron -->
 			</div>  <!-- mainSection -->	
-			
-					
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 		<script type="text/javascript" src="js/app.js"></script>	
-		<script type="text/javascript" src="js/controllers/mainController.js"></script>	
-		<script type="text/javascript" src="js/controllers/chgDegreeController.js"></script>
 		<script type="text/javascript" src="js/controllers/ajaxController.js"></script>		
 		<script src="js/script.js"></script>
-			
 	</body>
 </html>
