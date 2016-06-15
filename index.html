@@ -8,7 +8,6 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<!-- AngularJS -->
 	  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-	 
 	 <style>
 		* {
 			color: black;
@@ -43,9 +42,8 @@
 				  <h2 id="dInCel">{{ cvrtToCel }}<span>&#8451</span></h2></p>
 				  <h2>{{ locCast.weather[0].description }}</h2>
 				  <h1><i class="wi {{ dayOrNite }}{{ condition }}"></i></h1>
-				  <div>{{ noData }}</div>				  
-				  
-				  	<!--<button class="btn btn-primary btn-lg" type="button">Change Degrees</button>-->
+				  <div>{{ noData }}</div>
+				  				  				  
 				  <div class="btn-group" role="group">
 					<button type="button" class="btn btn-primary" id="f"><i class="wi wi-degrees"></i>Fahrenheit</button>
 					<button type="button" class="btn btn-primary" id="c"><i class="wi wi-degrees"></i>Celsius</button>
