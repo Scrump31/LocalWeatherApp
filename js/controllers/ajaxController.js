@@ -49,8 +49,11 @@ angular
 						  default:
 						    $scope.condition = " ";
 						}
-			  		});	//get request
-			  							
+			  		}),
+			  			function dataError(response) {
+							$scope.noData = statusText;
+						};
+			  			//get request
 				}); //nav geo function
 		}; // if statment
   });
