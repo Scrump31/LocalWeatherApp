@@ -38,7 +38,7 @@
 				<div class="jumbotron">
 				  <h1>The Local Weather App</h1>
 				  <h2>{{ locCast.name }}, {{ locCast.sys.country }}</h2>
-				  <h2 id="dInFar">{{ locCast.main.temp }}<span>&#8457</span></h2></p> 
+				  <h2 id="dInFar">{{ tempFarInt }}<span>&#8457</span></h2></p> 
 				  <h2 id="dInCel">{{ cvrtToCel }}<span>&#8451</span></h2></p>
 				  <h2>{{ locCast.weather[0].description }}</h2>
 				  <h1><i class="wi {{ dayOrNite }}{{ condition }}"></i></h1>

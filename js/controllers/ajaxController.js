@@ -13,6 +13,7 @@ angular
 					$http.get("http://api.openweathermap.org/data/2.5/weather?lat="+$scope.lat+"&lon="+$scope.lon+"&units=imperial&APPID=1583b128294c33f21c59ec26bb3cb74d").then(function (response) {
 						$scope.locCast = response.data;
 						$scope.cvrtToCel = Math.round( ($scope.locCast.main.temp -32) * 5 / 9); //converts temp data to Celsius
+						$scope.tempFarInt = Math.round($scope.locCast.main.temp); //converts fahrenheit temperature to integer
 												
 						//Displays wi-day- or wi-night- based on current hour of day
 						$scope.today = new Date();
