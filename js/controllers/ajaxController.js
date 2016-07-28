@@ -1,13 +1,10 @@
 angular.module('weatherApp')
 	.controller('AjaxCtrl',function($scope, $http) {
-		//$('.output').html('hi');
 
 		// Api to get lattitude and longitude
 		$http.get("http://ip-api.com/json").then(function(georesponse) {
 					$scope.lat = georesponse.data.lat;
 					$scope.lon = georesponse.data.lon;
-					//console.log('lattitude: ' + $scope.lat);
-					//console.log('longitude: ' + $scope.lon);
 
 			// Gets Open Weather API URL and inserts local latitude and longitude into string
 			$http.get("http://api.openweathermap.org/data/2.5/weather?lat="+$scope.lat+"&lon="+$scope.lon+"&units=imperial&APPID=1583b128294c33f21c59ec26bb3cb74d").then(function (response) {
