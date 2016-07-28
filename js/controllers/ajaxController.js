@@ -26,21 +26,27 @@ angular.module('weatherApp', [])
 		      switch ($scope.locCast.weather[0].main) {
 		        case "Clear":
 		          $scope.condition = "800";
+							$scope.bgimg = "img/Clear.jpeg";
 		          break;
 		        case "Thunderstorm":
 		          $scope.condition = "200";
+							$scope.bgimg = "img/Thunderstorm.jpeg";
 		          break;
 		        case "Clouds":
 		          $scope.condition = "804";
+							$scope.bgimg = "img/Clouds.jpeg";
 		          break;
 		        case "Drizzle":
 		          $scope.condition = "300";
+							$scope.bgimg = "img/Rain.jpeg";
 		          break;
 		        case "Rain":
 		          $scope.condition = "310";
+							$scope.bgimg = "img/Rain.jpeg";
 		          break;
 		        case "Snow":
 		          $scope.condition = "903";
+							$scope.bgimg = "img/Snow.jpeg";
 		          break;
 		        default:
 		          $scope.condition = " ";
