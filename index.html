@@ -28,6 +28,9 @@
 	 	#dInFar {
 		 	display: block;
 	 	}
+		#dInFar h2 {
+			display: inline-block;
+		}
 	 	#dInCel {
 		 	display: none;
 	 	}
@@ -44,7 +47,7 @@
 					<div class="output">
 					  <h1>The Local Weather App</h1>
 					  <h2><span ng-bind="locCast.name + ',' "></span> <span ng-bind="locCast.sys.country"></span></h2>
-						<h2 id="dInFar">{{ tempFarInt }}<span>&#8457</span></h2></p>
+						<div id="dInFar"><h2 ng-bind="tempFarInt"></h2><h2>&#8457</h2></div>
 					  <h2 id="dInCel">{{ cvrtToCel }}<span>&#8451</span></h2></p>
 					  <h2 ng-bind="locCast.weather[0].description"></h2>
 					  <h1><i class="wi {{ dayOrNite }}{{ condition }}"></i></h1>
