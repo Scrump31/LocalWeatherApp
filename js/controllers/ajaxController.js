@@ -1,4 +1,4 @@
-angular.module('weatherApp')
+angular.module('weatherApp', [])
 	.controller('AjaxCtrl',function($scope, $http) {
 
 		// Api to get lattitude and longitude
