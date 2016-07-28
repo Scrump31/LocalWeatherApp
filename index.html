@@ -3,7 +3,7 @@
 	<head>
 		<title>Local Weather App</title>
 	<!-- Weather Icons -->
-	<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">	
+	<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
 	<!-- Latest compiled and minified Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<!-- AngularJS -->
@@ -17,7 +17,7 @@
 			display: inline-block;
 		}
 	 	#mainSection {
-		 	margin-top: 10.5%; 
+		 	margin-top: 10.5%;
 	 	}
 	 	.wi.wi-day-cloudy.wi-fw {
 		 	font-size: 150%;
@@ -41,24 +41,26 @@
 	<body class="container bg-primary" ng-app="weatherApp">
 			<div id="mainSection" class="text-center" ng-controller="AjaxCtrl">
 				<div class="jumbotron">
-				  <h1>The Local Weather App</h1>
-				  <h2>{{ locCast.name }}, {{ locCast.sys.country }}</h2>
-				  <h2 id="dInFar">{{ tempFarInt }}<span>&#8457</span></h2></p> 
-				  <h2 id="dInCel">{{ cvrtToCel }}<span>&#8451</span></h2></p>
-				  <h2>{{ locCast.weather[0].description }}</h2>
-				  <h1><i class="wi {{ dayOrNite }}{{ condition }}"></i></h1>
-				  <div>{{ noData }}</div>
-				  				  				  
+					<div class="output">
+					  <h1>The Local Weather App</h1>
+					  <h2><span ng-bind="locCast.name + ',' "></span> <span ng-bind="locCast.sys.country"></span></h2>
+						<h2 id="dInFar">{{ tempFarInt }}<span>&#8457</span></h2></p>
+					  <h2 id="dInCel">{{ cvrtToCel }}<span>&#8451</span></h2></p>
+					  <h2 ng-bind="locCast.weather[0].description"></h2>
+					  <h1><i class="wi {{ dayOrNite }}{{ condition }}"></i></h1>
+					  <div ng-bind="noData"></div>
+					</div>
+
 				  <div class="btn-group btn-group-lg" role="group">
 					<button type="button" class="btn btn-primary" id="f"><i class="wi wi-degrees"></i>Fahrenheit</button>
 					<button type="button" class="btn btn-primary" id="c"><i class="wi wi-degrees"></i>Celsius</button>
 				  </div>
 				  <div>Note: Location services must be enabled to retrieve weather data for your device.</div>
 				</div><!-- jumbotron -->
-			</div>  <!-- mainSection -->	
+			</div>  <!-- mainSection -->
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-		<script type="text/javascript" src="js/app.js"></script>	
-		<script type="text/javascript" src="js/controllers/ajaxController.js"></script>		
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/controllers/ajaxController.js"></script>
 		<script src="js/script.js"></script>
 	</body>
 </html>
