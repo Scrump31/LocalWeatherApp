@@ -45,7 +45,6 @@ angular.module('weatherApp', [])
 		        default:
 		          $scope.condition = " ";
 		      }
-
 			}, function errorCallback(response) {
 			   $scope.noData = statusText;
 			 });

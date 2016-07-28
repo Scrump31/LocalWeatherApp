@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="weatherApp" ng-controller="AjaxCtrl" style="background-image: url('img/{{locCast.weather[0].main}}.jpeg');">
 	<head>
 		<title>Local Weather App</title>
 	<!-- Weather Icons -->
@@ -9,12 +9,19 @@
 	<!-- AngularJS -->
 	  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 	 <style>
-		* {
-			color: black;
-		}
+	 html {
+		background-size: cover;
+		background-repeat: no-repeat;
+	 }
+	 body {
+	 	background-color: transparent;;
+	 }
 		.jumbotron {
-			background-color: gainsboro;
-			display: inline-block;
+			background-color: gray;
+			background-color:rgba(4,0,0,0.35);
+			color: white;
+
+			isplay: inline-block;
 		}
 	 	#mainSection {
 		 	margin-top: 10.5%;
@@ -41,8 +48,8 @@
 	 	}
 	 </style>
 	</head>
-	<body class="container bg-primary" ng-app="weatherApp">
-			<div id="mainSection" class="text-center" ng-controller="AjaxCtrl">
+	<body class="container">
+			<div id="mainSection" class="text-center">
 				<div class="jumbotron">
 					<div class="output">
 					  <h1>The Local Weather App</h1>
