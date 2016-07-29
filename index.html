@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="weatherApp" ng-controller="AjaxCtrl"  ng-style="{'background-image':'url('+bgimg+')'}">
+<html>
 	<head>
 		<title>Local Weather App</title>
 	<!-- Weather Icons -->
@@ -9,10 +9,6 @@
 	<!-- AngularJS -->
 	  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 	 <style>
-	 html {
-		background-size: cover;
-		background-repeat: no-repeat;
-	 }
 	 body {
 	 	background-color: transparent;;
 	 }
@@ -20,11 +16,11 @@
 			background-color: gray;
 			background-color:rgba(4,0,0,0.35);
 			color: white;
-
-			isplay: inline-block;
 		}
 	 	#mainSection {
-		 	margin-top: 10.5%;
+		 	margin-top: 5.5%;
+			background-size: cover;
+			background-repeat: no-repeat;
 	 	}
 	 	.wi.wi-day-cloudy.wi-fw {
 		 	font-size: 150%;
@@ -48,8 +44,8 @@
 	 	}
 	 </style>
 	</head>
-	<body class="container">
-			<div id="mainSection" class="text-center">
+	<body class="container" ng-app="weatherApp" ng-controller="AjaxCtrl">
+			<div id="mainSection" class="text-center" ng-style="{'background-image':'url('+bgimg+')'}">
 				<div class="jumbotron">
 					<div class="output">
 					  <h1>The Local Weather App</h1>

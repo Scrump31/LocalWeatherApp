@@ -7,7 +7,8 @@ angular.module('weatherApp', [])
 					$scope.lon = georesponse.data.lon;
 
 			// Gets Open Weather API URL and inserts local latitude and longitude into string
-			$http.get("http://api.openweathermap.org/data/2.5/weather?lat="+$scope.lat+"&lon="+$scope.lon+"&units=imperial&APPID=1583b128294c33f21c59ec26bb3cb74d").then(function (response) {
+			//$http.get("http://api.openweathermap.org/data/2.5/weather?lat="+$scope.lat+"&lon="+$scope.lon+"&units=imperial&APPID=1583b128294c33f21c59ec26bb3cb74d").then(function (response) {
+			$http.jsonp("http://api.openweathermap.org/data/2.5/weather?lat="+$scope.lat+"&lon="+$scope.lon+"&units=imperial&APPID=1583b128294c33f21c59ec26bb3cb74d&callback=JSON_CALLBACK").then(function (response) {
 				$scope.locCast = response.data;
 				console.log($scope.locCast);
 				$scope.cvrtToCel = Math.round( ($scope.locCast.main.temp -32) * 5 / 9); //converts temp data to Celsius
