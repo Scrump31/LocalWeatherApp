@@ -53,8 +53,9 @@
 				<div class="jumbotron">
 					<div class="output">
 					  <h1>The Local Weather App</h1>
-					  <h2><span ng-bind="locCast.name + ',' "></span> <span ng-bind="locCast.sys.country"></span></h2>
-						<div id="dInFar"><h2 ng-bind="tempFarInt"></h2><h2>&#8457</h2></div>
+					  <h2 ng-if="locCast"><span ng-bind="locCast.name + ',' "></span> <span ng-bind="locCast.sys.country"></span></h2>
+						<h2 ng-if="!locCast">Retrieving Weather Data...</h2>
+						<div ng-if="locCast" id="dInFar"><h2 ng-bind="tempFarInt"></h2><h2>&#8457</h2></div>
 					  <h2 id="dInCel">{{ cvrtToCel }}<span>&#8451</span></h2></p>
 					  <h2 ng-bind="locCast.weather[0].description"></h2>
 					  <h1><i class="wi {{ dayOrNite }}{{ condition }}"></i></h1>
